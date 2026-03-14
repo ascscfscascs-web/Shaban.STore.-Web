@@ -1,0 +1,347 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s linear;
+}
+
+@font-face {
+    font-family:'Lucida Sans', 'Lucida Sans Regular','Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    src: url("blackchancry.ttf");
+}
+
+body{
+
+    font-family:inherit ;
+    background:linear-gradient(180deg,#0f172a,#0b1220);
+    /* background-size: 1358px 597px; */
+    /* background-repeat: repeat; */
+    /* background-position: center */
+    background-position: 1px 36px;
+    
+}
+
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(22, 8, 49, 0.5);
+    backdrop-filter:blur(10px);
+    z-index: 1000;
+    height: 50px;
+    text-align: center;
+}
+
+.logo{
+    color: #1f75f7f1;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+
+.menu{
+    margin-right:30px ;
+    position: absolute;
+    right: 10px;
+   
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+.nav-links li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+
+li a{
+    text-decoration: none;
+    margin-right: 30px;
+    color: blue;
+    padding: 8px;
+    font-size: 24px;
+    border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+   
+   
+}
+.active{
+    border: 1px solid blue;
+    background-color: blue;
+    color:white;
+
+}
+
+li a:hover{
+    border:1px solid blue;
+    background-color: blue;
+    color: white;
+
+}
+.margin-r{
+    margin-right:-40px    
+}
+@media (max-width:600px){
+    .nav-links{
+        flex-direction: row;
+      
+        position: fixed;
+        text-align: center;
+        left:140px;
+        top: 9px;
+        transition: .3s;
+        height: calc(100vh-60px);
+        padding-top:10px ;
+        gap: 10px
+    }
+    .nav-links li{
+        margin-bottom: 10px;
+        
+    }
+    .nav-links li a{
+        font-size: 13px;
+        position: relative;
+        left: 0px;
+        /* bottom:2px; */
+        padding: 2px 0px;
+        gap: 2px;
+        margin: 0px;
+       
+    }
+    .nav-links.show{
+        right: 0;
+    }
+    .logo{
+        position: relative;
+        right:  30px;
+        font-size: 16px;
+        padding: 2px;
+        top: 3px;
+    }
+}
+
+.container{
+    /* position: relative; */
+    height: 100vh;
+}
+
+.why-title{
+    text-align: center;
+    padding: 80px 20px 40px 20px;
+}
+
+.why-title h1{
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.2);
+}
+
+.why-title p{
+    font-size: 18px;
+    opacity: .8;
+    color: #cccccc;
+    font-weight: 400;
+}
+
+/* =========================
+   About Us Section
+========================= */
+.about-us{
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 50px 40px;
+    text-align: center;
+    background: #0f172a;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    border: 2px solid #ff2e2e;
+    transition: .2s;
+    box-shadow: 0 0 10px #920404;
+}
+
+.about-us h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #ff2e2e;
+    font-weight: 800;
+}
+
+.about-us p{
+    line-height: 1.9;
+    font-size: 25px;
+    color: #e0e0e0;
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-us:hover{
+    transform: scale(1.06);
+    box-shadow: 0 0 15px #880b0b;
+}
+
+/* =========================
+   Advantages Section
+========================= */
+.advantages{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.advantages h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.advantages-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Grid 4 Columns by Default */
+    gap: 20px;
+}
+
+.adv-card{
+    padding: 25px;
+    border-radius: 20px;
+    background: #0f172a;
+    border: 2px solid #295463;
+    color: #00bfff;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+}
+
+.adv-card:hover{
+    transform: scale(1.03);
+}
+
+/* =========================
+   Vision Section
+========================= */
+.vision{
+    margin: 60px 0;
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #0f172a, #1b1f34, #0f172a);
+    color: #fff;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+/* Tablets and Smaller Devices */
+@media (max-width: 768px) {
+    /* Why Choose Section */
+    .why-title h1{
+        font-size: 30px;
+    }
+
+    .why-title p{
+        font-size: 16px;
+    }
+
+    /* About Us Section */
+    .about-us{
+        padding: 30px 30px;
+        max-width: 200px;
+        width: 250px;
+    }
+
+    .about-us h2{
+        font-size: 25px;
+    }
+
+    .about-us p{
+        font-size: 18px;
+    }
+
+    /* Advantages Section */
+    .advantages h2{
+        font-size: 26px;
+    }
+
+    .advantages-box{
+        grid-template-columns: repeat(2, 1fr); /* 2 Columns on Tablet */
+    }
+
+    .adv-card{
+        font-size: 16px;
+    }
+
+    /* Vision Section */
+    .vision{
+        font-size: 18px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    /* Why Choose Section */
+    .why-title h1{
+        font-size: 24px;
+    }
+
+    .why-title p{
+        font-size: 14px;
+    }
+
+    /* About Us Section */
+    .about-us{
+        padding: 30px 20px;
+        max-width: 370px;
+    }
+
+    .about-us h2{
+        font-size: 28px;
+    }
+
+    .about-us p{
+        font-size: 18px;
+    }
+
+    /* Advantages Section */
+    .advantages h2{
+        font-size: 22px;
+    }
+
+    .advantages-box{
+        grid-template-columns: 1fr; /* 1 Column on Mobile */
+        gap: 15px;
+    }
+
+    .adv-card{
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    /* Vision Section */
+    .vision{
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+
+
+

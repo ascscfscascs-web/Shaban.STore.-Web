@@ -1,0 +1,465 @@
+  *{
+   
+    box-sizing: border-box;
+    transition: .3s linear;
+}
+
+@font-face {
+    font-family:'Lucida Sans', 'Lucida Sans Regular','Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    src: url("blackchancry.ttf");
+}
+
+body{
+
+    font-family:inherit ;
+    background:linear-gradient(180deg,#0f172a,#0b1220);
+    overflow-x:hidden ;
+
+    /* background-position: center */
+
+    
+}
+ html{
+    scroll-behavior: smooth;
+ }
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+     background: rgba(22, 8, 49, 0.5);
+    height: 50px;
+    z-index: 1000;
+}
+
+.logo{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.nav-links li{
+    position: relative;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: .3s;
+    z-index: 1000;
+}
+li a{
+    text-decoration: none;
+    margin-right: 30px;
+    color: blue;
+    padding: 8px;
+    font-size: 24px;
+    border-top-left-radius: 10px;
+    z-index: 1000;
+}
+.active{
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+}
+li a:hover{
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+}
+.margin-r{
+    margin-right: 40px;
+}
+
+/* القائمة */
+.menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 7px;
+    background: rgba(0, 0, 0, 0.705);
+    list-style: none;
+    /* min-width: 100px; */
+    font-size: 6px;
+    z-index: 10000;
+}
+
+.menu li{
+    padding: 7px;
+    margin-right: 5px;
+    z-index: 1000;
+}
+
+.menu a{
+    color: white;
+    background-color: #00000000;
+    letter-spacing: 1px;
+     z-index: 1000;
+}
+
+
+/* الظهور */
+.dropdown:hover .menu{
+    display: block;
+}
+@media (max-width:600px){
+    .nav-links{
+        flex-direction: row;
+      
+        position: fixed;
+        text-align: center;
+        left: 97px;
+        font-weight: bold;
+        top: 0px;
+        transition: .3s;
+        height: calc(100vh-60px);
+        padding-top:5px ;
+        gap: 4px;
+        z-index: 1000;
+    }
+    .nav-links li{
+        margin-bottom: 10px;
+        
+    }
+    .nav-links li a{
+        font-size: 12px;
+        position: relative;
+        left: 0px;
+        /* bottom:2px; */
+        padding: 2px 4px;
+        gap: 5px;
+        margin: 0px;
+    }
+    .nav-links.show{
+        right: 0;
+    }
+    .logo{
+        position: relative;
+        right:  30px;
+        font-size: 16px;
+        padding: 2px;
+        top: 5px;
+    }
+}
+
+i{
+    padding-left: -10px;
+}
+
+@keyframes neonGlow{
+    0%{
+        text-shadow: 0 0 5px #202525,0 0 10px #00cfff,0 0 10px #00cfff;
+    }
+    50%{
+        text-shadow: 0 0 10px #00cfff ,0 0 20px #00cfff , 0 0 20px #00cfff , 0 0 40px #00ffff;
+    }
+    100%{
+        text-shadow: 0 0 5px#00cfff , 0 0 10px #00cfff , 0 0 10px #00cfff;
+    }
+}
+
+.continer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* =========================
+   Section Title
+========================= */
+.section-1{
+    color:#00cfff;
+    text-align: center;
+    font-size: 32px;
+    margin: 80px 0 40px; /* مسافة قبل وبعد */
+    padding: 20px;
+    border-left: 5px solid #00cfff;
+    background: #0f172a;
+    width: 100%;
+    box-shadow: 0 0 15px #00cfff55;
+    letter-spacing: 2px;
+    animation: neonGlow 7s ease-in-out infinite alternate;
+}
+
+/* Neon Animation */
+@keyframes neonGlow{
+    0%{
+        text-shadow: 0 0 5px #00cfff, 0 0 10px #00cfff;
+    }
+    50%{
+        text-shadow: 
+        0 0 10px #00cfff,
+        0 0 20px #00cfff,
+        0 0 40px #00ffff;
+    }
+    100%{
+        text-shadow: 0 0 5px #00cfff, 0 0 10px #00cfff;
+    }
+}
+
+/* =========================
+   Card Style
+========================= */
+
+
+.card-12{
+    background-color:#0f172a;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 0 15px #00cfff55;
+    transition: transform .3s, box-shadow .3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image */
+.card-12 img{
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    transition: 0.4s;
+}
+.card-12 img:hover{
+
+    transform: scale(1.3)
+    translateY(-15px);
+}
+
+/* Product Name */
+.name-12{
+    color: #ffd700;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Price */
+.price-12{
+    color:#ffd700;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+/* Buy Button */
+.buy-btn-12{
+    margin-top: auto;
+    padding: 10px;
+    background: #00cfff;
+    border: 0;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform .3s, background .3s;
+    cursor: pointer;
+}
+
+.buy-btn-12 a{
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+/* Hover Effects */
+.card-12:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px #00cfffaa;
+}
+
+.buy-btn-12:hover{
+    background: #00ffff;
+    transform: scale(1.05);
+}
+
+/* =========================
+   Mobile (كارتين)
+========================= */
+@media (max-width: 600px){
+    .continer{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        padding: 25px 12px;
+    }
+
+    .card-12{
+        padding: 14px;
+    }
+
+    .card-12 img{
+        height: 130px;
+    }
+     .card-12 img:hover{
+      transform: scale(1.4);
+
+     }
+    .section-1{
+        font-size: 22px;
+        margin: 60px 0 30px;
+        padding: 15px;
+        letter-spacing: 1px;
+    }
+}
+
+
+
+ .section{
+     color:#00cfff;
+    text-align: center;
+    font-size: 32px;
+    margin: 80px 0 40px; /* مسافة قبل وبعد */
+    padding: 20px;
+    border-left: 5px solid #00cfff;
+    background: #0f172a;
+    width: 100%;
+    box-shadow: 0 0 15px #00cfff55;
+    letter-spacing: 2px;
+    animation: neonGlow 7s ease-in-out infinite alternate;
+}
+
+.card-t{
+    background-color:#0f172a ;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 0 15px #00cfff55;
+    transition: transform .3s ,box-shadow .3s;
+    text-align: center;
+  
+}
+.card-t img{
+    height: 190px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 12px;    
+    transition: 0.4s; 
+    width: 100%;
+}
+.card-t img:hover{
+
+    transform: scale(1.2)
+    translateY(-15px);
+}
+.name-t{
+    color: #ffd700;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.price-t{
+    color:#ffd700;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.buy-btn-t{
+    color: #0f172a;
+    padding: 8px 15px;
+    background: #00cfff;
+    border: 0;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform .3s , background .3s;
+    cursor: ponter;
+ }
+.buy-btn-t a{
+      text-decoration: none;
+      color: black;
+ }
+.card-t:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px#00cfffaa ;
+}
+.buy-btn-t:hover{
+    background: #00ffff;
+    transform:scale(1.05) ;
+} 
+
+.section-bental{
+    color: #00cfff;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 5px  0 25px;
+    padding: 12px 20px;
+    text-align: center;
+    background: #0f172a;
+    box-shadow: 0 0 15px #00cfff55 ;
+    letter-spacing: 2px;
+    animation: neonGlow 7s ease-in-out infinite alternate;
+    border-left: 5px solid #00cfff;
+    width:100% ;
+}
+@keyframes neonGlow{
+    0%{
+        text-shadow: 0 0 5px #00cfff,0 0 10px #00cfff,0 0 10px #00cfff;
+    }
+    50%{
+        text-shadow: 0 0 10px #00cfff ,0 0 20px #00cfff , 0 0 20px #00cfff , 0 0 40px #00ffff;
+    }
+    100%{
+        text-shadow: 0 0 5px#00cfff , 0 0 10px #00cfff , 0 0 10px #00cfff;
+    }
+}
+.container-bental{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+} 
+@media (max-width: 600px){
+    .container-bental{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        padding: 25px 12px;}
+        
+    .card-t{
+        padding: 14px;
+    }
+
+    .card-t img{
+        height: 150px;
+    }
+
+
+    .section-bental{
+        font-size: 22px;
+        margin: 60px 0 30px;
+        padding: 15px;
+        letter-spacing: 1px;
+    }
+}
+
+.شربات{
+    text-align: center;
+    color: #00cfff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+footer{
+    background-color: #00cfff;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    width:100%;
+}

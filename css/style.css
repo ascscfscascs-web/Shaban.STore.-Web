@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s linear;
+}
+
+@font-face {
+    font-family:'Lucida Sans', 'Lucida Sans Regular','Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    src: url("blackchancry.ttf");
+}
+
+body{
+    /* height: 100vh; */
+    font-family:inherit ; 
+     /* background-image: url(../IMG_20251214_141004_648.jpg); 
+     background-size: 1358px 597px;  */
+     /* background-repeat: no-repeat;  */
+      background-color: rgb(0, 0, 0);
+     background-position: 1px 36px;
+    
+}
+
+ .navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 25px 40px;
+    background: rgba(22, 8, 49, 0.5);
+    backdrop-filter:blur(10px);
+    z-index: 1000;
+    height: 50px;
+
+
+}
+
+.logo{
+    color: #1f75f7f1;
+    font-size: 26px;
+    font-weight: bold;
+
+}
+
+
+.menu{
+    /* margin-right:30px ; */
+    position: absolute;
+    right: 10px;
+   
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+.nav-links li a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+
+li a{
+    text-decoration: none;
+    margin-right: 30px;
+    color: blue;
+    padding: 8px;
+    font-size: 24px;
+    border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+   
+   
+}
+.active{
+    border: 1px solid blue;
+    background-color: blue;
+    color:white;
+
+}
+
+li a:hover{
+    border:1px solid blue;
+    background-color: blue;
+    color: white;
+
+}
+.margin-r{
+    margin-right:-40px    
+}
+@media (max-width:600px){
+    .nav-links{
+        flex-direction: row;
+      
+        position: fixed;
+    
+        left:140px;
+        top: 17px;
+        transition: .3s;
+        height: calc(100vh-60px);
+        /* padding-top:10px ; */
+        gap: 12px
+    }
+    .nav-links li{
+        margin-bottom: 10px;
+        
+    }
+    .nav-links li a{
+        font-size: 13px;
+        position: relative;
+        left: 0px;
+        /* bottom:2px; */
+        padding: 2px 0px;
+        gap: 2px;
+        border-radius: 9px;
+        margin: 0px;
+    }
+    .nav-links.show{
+        right: 0;
+    }
+    .logo{
+        position: relative;
+        right:  30px;
+        font-size: 16px;
+        padding: 2px;
+        top: 1px;
+    }
+}
+
+/* =========================
+   Main Container
+========================= */
+.continer{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* =========================
+   Main Title
+========================= */
+.continer h2{
+    font-size: 50px;
+    letter-spacing: 3px;
+    color: white;
+    margin-bottom: 25px;
+    line-height: 60px;
+}
+
+/* =========================
+   Sub Text
+========================= */
+.sub-text,
+h3{
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing:1px;
+    max-width: 800px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeup 4s ease forwards infinite;
+}
+
+/* Animation */
+@keyframes fadeup{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   Button Box
+========================= */
+.btn-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+}
+
+/* Button */
+.btn-link{
+    display:inline-block;
+    padding: 14px 35px;
+    background: rgb(3, 29, 145);
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform .3s, background .3s, box-shadow .3s;
+    box-shadow: 0 0 7px rgb(43, 9, 238);
+}
+
+.btn-link:hover{
+    transform: scale(1.07);
+    background: rgb(4, 164, 204);
+    box-shadow: 0 0 20px rgb(4, 164, 204);
+}
+
+/* =========================
+   Responsive (Mobile)
+========================= */
+@media (max-width: 768px){
+    .continer h2{
+        font-size: 32px;
+        position: absolute;
+        top: 20%;
+    }
+
+    h3
+    .sub-text{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .btn-link{
+        font-size: 18px;
+        padding: 12px 28px;
+    }
+    .btn-box{
+        position: absolute;
+        top: 70%;
+        left: 25%;
+    }
+}
+
+@media (max-width: 480px){
+    .continer{
+        padding: 30px 15px;
+    }
+
+    .continer h2{
+        font-size: 24px;
+        /* line-height: 3px; */
+    }
+
+    h3
+    .sub-text{
+        font-size: 16px;
+        line-height: 3px ;
+    }
+}
+
+
+
+/* .continer{
+    position: relative; 
+    height: 100vh;
+}
+
+
+ .continer h2{
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    font-size: 55px;
+    letter-spacing: 2px;
+    color: blue;
+    text-align: center;
+}
+
+
+
+ h3{
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    left: 25%;
+    font-size: 40px;
+    letter-spacing: 1px;
+    width: 600px;
+    color: blue;
+    font-weight: 1000;
+    margin-top: 16px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeup 4s ease forwards infinite;
+} 
+@keyframes fadeup{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+.btn-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+}
+.btn-link{
+    display:inline-block;
+    text-align: center;
+    padding: 14px 35px;
+    background: rgb(3, 29, 145);
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: .3s;
+    box-shadow: 0 0 7px rgb(43, 9, 238);
+}
+.btn-link:hover{
+    transform: scale(1.07);
+    background: rgb(4, 164, 204);
+    box-shadow: 15px green;
+} */

@@ -1,0 +1,258 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s linear;
+}
+
+@font-face {
+    font-family:'Lucida Sans', 'Lucida Sans Regular','Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    src: url("blackchancry.ttf");
+}
+
+body{
+
+    font-family:inherit ;
+    background:linear-gradient(180deg,#0f172a,#0b1220);
+    /* background-size: 1358px 597px; */
+    /* background-repeat: repeat; */
+    /* background-position: center */
+    background-position: 1px 36px;
+    
+}
+ .navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(22, 8, 49, 0.5);
+    backdrop-filter:blur(10px);
+    z-index: 1000;
+}
+
+.logo{
+    color: #1f75f7f1;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+
+.menu{
+    /* margin-right:30px ; */
+    position: absolute;
+    right: 10px;
+   
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+.nav-links li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+
+li a{
+    text-decoration: none;
+    margin-right: 30px;
+    color: blue;
+    padding: 8px;
+    font-size: 24px;
+    border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+   
+   
+}
+.active{
+    border: 1px solid blue;
+    background-color: blue;
+    color:white;
+
+}
+
+li a:hover{
+    border:1px solid blue;
+    background-color: blue;
+    color: white;
+
+}
+.margin-r{
+    margin-right:-40px    
+}
+@media (max-width:600px){
+    .nav-links{
+        flex-direction: row;
+      
+        position: fixed;
+        top: 1px;
+        left:140px;
+       
+        transition: .3s;
+        height: calc(100vh-60px);
+        padding-top:20px ;
+        gap: 10px
+    }
+    .nav-links li{
+        margin-bottom: 10px;
+    
+        
+    }
+    .nav-links li a{
+        font-size: 12px;
+        position: relative;
+        left: 0px;
+        /* bottom:2px; */
+        padding: 2px 0px;
+        gap: 1px;
+        margin: 3px;
+    }
+    .nav-links.show{
+        right: 0;
+    }
+    .logo{
+        position: relative;
+        right:  30px;
+        font-size: 16px;
+        padding: 2px;
+        top: 3px;
+    }
+}
+.container{
+    position: relative;
+    /* height: 100vh; */
+}
+
+
+
+.why-title{
+    text-align: center;
+    padding: 80px 20px 40px 20px;
+}
+.why-title h1{
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 2px 2px 12px 
+    rgba(255,255,255,0,2);
+
+}
+.why-title p{
+    font-size: 18px;
+    opacity: .8;
+    color: #cccccc;
+    font-weight: 400;
+}
+.socials{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    border-radius: 20%;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    transition: .3s;
+    position: relative;
+    overflow: hidden;
+    /* box-shadow: 0 0 15px #1877f2; */
+}
+.facebook{
+    background: #1877f2;
+    box-shadow: 0 0 15px #1877f2; 
+}
+.facebook:hover{
+     box-shadow: 0 0 25px #1877f2; 
+}
+.whatsapp{
+    background: green;
+    box-shadow: 0 0 15px green;
+}
+.whatsapp:hover{
+    box-shadow: 0 0 25px green;
+}
+.tiktok{
+    background: #111;
+      box-shadow: 0 0 15px black;
+} 
+.tiktok:hover{
+    box-shadow: 0 0 25px black;
+}
+ .social:hover{
+    transform: scale(1.1);
+    opacity: .8s;
+    /* border:2px solid red; */
+   
+}
+.type h1{
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    margin: 20px 13px;
+    font-size: 40px;
+    color: white;
+}
+.btn-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.btn-link{
+    display:inline-block;
+    text-align: center;
+    padding: 14px 35px;
+    background: green;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: .3s;
+    box-shadow: 0 0 7px rgb(8, 252, 8);
+}
+.btn-link:hover{
+    transform: scale(1.07);
+    background: rgb(3, 65, 3);
+    box-shadow: 15px green;
+}
+@media (max-width:767px){
+   .socials{
+    gap: 20px;
+    padding: 10px;
+}
+.social{
+    
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 15px;
+  
+}
+
+ .social:hover{
+    transform: scale(1.1);
+    opacity: .8s;
+    /* border:2px solid red; */
+    box-shadow:  0 0 25px #1877f2;
+}
+}
